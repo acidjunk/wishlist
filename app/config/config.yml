@@ -37,11 +37,24 @@ assetic:
     bundles:        [ ]
     #java: /usr/bin/java
     filters:
+        lessphp:
+             file: %kernel.root_dir%/../vendor/oyejorge/less.php/lessc.inc.php
+             apply_to: "\.less$"
         cssrewrite: ~
         #closure:
         #    jar: "%kernel.root_dir%/Resources/java/compiler.jar"
         #yui_css:
         #    jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
+braincrafted_bootstrap:
+    less_filter: lessphp
+    assets_dir: %kernel.root_dir%/../vendor/twbs/bootstrap
+    jquery_path: %kernel.root_dir%/../vendor/jquery/jquery/jquery-1.11.1.js
+    fonts_dir: %kernel.root_dir%/../web/fonts
+    auto_configure:
+        assetic: true
+        twig: true
+        knp_menu: true
+        knp_paginator: true
 
 # Doctrine Configuration
 doctrine:
