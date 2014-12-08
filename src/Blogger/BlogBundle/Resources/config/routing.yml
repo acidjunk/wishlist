@@ -1,4 +1,4 @@
-blogger_blog_homepage:
+BloggerBlogBundle_homepage:
     path:     /blog
     defaults: { _controller: BloggerBlogBundle:Page:index }
     requirements:
@@ -9,3 +9,15 @@ blogger_blog_homepage:
     defaults: { _controller: BloggerBlogBundle:Page:index }
     requirements:
       _method: GET
+
+BloggerBlogBundle_about:
+    pattern:  /about
+    defaults: { _controller: BloggerBlogBundle:Page:about }
+    requirements:
+        _method:  GET
+
+BloggerBlogBundle_contact:
+    pattern:  /contact
+    defaults: { _controller: BloggerBlogBundle:Page:contact }
+    requirements:
+        _method:  GET|POST

@@ -1,0 +1,3 @@
+feature_voter_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: FeatureVoterBundle:Default:index }

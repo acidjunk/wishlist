@@ -38,6 +38,7 @@
     </nav>
 
     <div class="container">
+        {% include 'BraincraftedBootstrapBundle::flash.html.twig'  with { 'close': true } %}
         <div class="row col-md-8 col-lg-8">
         {% block body %}{% endblock %}
         </div>

@@ -23,10 +23,10 @@ class Builder extends ContainerAware
     public function leftNavbarMenu(FactoryInterface $factory, array $options)
     {
         $menu = $factory->createItem('root');
-
-        $menu->addChild('Home', array('route' => 'homepage'));
         $menu->addChild('Features', array('route' => 'homepage'));
-        $menu->addChild('About', array('route' => 'homepage'));
+        $menu->addChild('Blog', array('route' => 'BloggerBlogBundle_homepage'));
+        $menu->addChild('About', array('route' => 'BloggerBlogBundle_about'));
+        $menu->addChild('Contact', array('route' => 'BloggerBlogBundle_contact'));
         //$menu->addChild('About Me', array(
         //'route' => 'page_show',
         //'routeParameters' => array('id' => 42)

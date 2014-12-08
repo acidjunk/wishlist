@@ -1,0 +1,38 @@
+{% extends 'BloggerBlogBundle::layout.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+    <div class="page-header">
+        <h1>Contact</h1>
+    </div>
+    <p>Use the form to send me an e-mail.</p>
+    <form action="{{ path('BloggerBlogBundle_contact') }}" method="post" {{ form_enctype(form) }} class="blogger">
+        {{ form_errors(form) }}
+
+        {{ form_row(form.name) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.subject) }}
+        {{ form_row(form.body) }}
+
+        {{ form_rest(form) }}
+
+        <input type="submit" value="Submit" />
+    </form>
+
+    Blog homepage
+{% endblock %}
+
+{% block sidebar %}
+    <div class="page-header">
+        <h1>Address</h1>
+    </div>
+    René Dohmen<br>
+    {{ icon('envelope') }} rene@bellvilla.nl<br>
+    {{ icon('phone') }} +31 495 820 222<br>
+    {{ icon('cloud-download') }} <a href="https://github.com/acidjunk/wishlist">get src code</a><br>
+
+
+
+
+{% endblock %}
