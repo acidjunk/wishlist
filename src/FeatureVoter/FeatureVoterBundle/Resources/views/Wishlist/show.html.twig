@@ -1,0 +1,20 @@
+{% extends 'BloggerBlogBundle::layout.html.twig' %}
+
+{% block title %}Wishlist item{% endblock %}
+
+{% block body %}
+    <div class="page-header">
+        <h1>{{ wishlist.title }}</h1>
+    </div>
+    {{ wishlist.description }}
+
+{% endblock %}
+
+{% block sidebar %}
+    <div class="page-header">
+        <h1>Archive</h1>
+    </div>
+    <h3>December</h3>
+    <a href="#">Blog 1</a><br>
+    <a href="#">Blog 2</a>
+{% endblock %}
