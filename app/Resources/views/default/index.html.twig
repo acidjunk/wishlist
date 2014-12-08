@@ -1,5 +1,26 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Home{% endblock %}
+
 {% block body %}
-    Homepage.
+<div class="page-header">
+    <h1>Feature wishlist</h1>
+</div>
+<h2>What is this?</h2>
+<p>This is a small app to keep track of features and wishes with the ability to vote on features. I wrote this app to get myself familiar with the Symfony2 framework. It uses a bootsrapped design.</p>
+
+<div class="well">
+{{ label_info('Info') }} <i>This app will be released using a GPL-V3 license and can be found on github.</i>
+</div>
+
+
+{% endblock %}
+
+
+{% block sidebar %}
+    <div class="page-header">
+        <h1>Features</h1>
+    </div>
+    <a href="#">Unseen features {{ badge('42') }}</a><br>
+    <a href="#">Accepted features {{ badge('42') }}</a>
 {% endblock %}

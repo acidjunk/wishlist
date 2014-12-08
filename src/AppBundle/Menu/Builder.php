@@ -27,7 +27,6 @@ class Builder extends ContainerAware
         $menu->addChild('Home', array('route' => 'homepage'));
         $menu->addChild('Features', array('route' => 'homepage'));
         $menu->addChild('About', array('route' => 'homepage'));
-        $menu->addChild('Home', array('route' => 'homepage'));
         //$menu->addChild('About Me', array(
         //'route' => 'page_show',
         //'routeParameters' => array('id' => 42)

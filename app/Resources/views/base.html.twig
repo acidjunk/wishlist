@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Wishlist: Vote on features</title>
+    <title>{% block title %}{% endblock %} - Wishlist: Vote on features</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="screen">
@@ -11,24 +11,52 @@
     {% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
 </head>
 <body>
-{#{{ knp_menu_render('AppBundle:Builder:mainMenu', { 'style': 'tabs' }) }}#}
+    <nav class="navbar navbar-inverse" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle"
+                    data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Feature Wishlist</a>
+        </div>
 
-<nav class="navbar navbar-default" role="navigation">
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-        {{ knp_menu_render('AppBundle:Builder:leftNavbarMenu', { 'style': 'navbar' }) }}
-        <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            {{ knp_menu_render('AppBundle:Builder:leftNavbarMenu', { 'style': 'navbar' }) }}
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            {{ knp_menu_render('AppBundle:Builder:rightNavbarMenu', { 'style': 'navbar-right' }) }}
+        </div><!-- /.navbar-collapse -->
+    </nav>
+
+    <div class="container">
+        <div class="row col-md-8 col-lg-8">
+        {% block body %}{% endblock %}
+        </div>
+        <div class="row col-md-1 col-lg-1"></div>
+        <div class="row col-md-3 col-lg-3">
+            {% block sidebar %}{% endblock %}
+        </div>
+    </div>
+
+    <footer id="footer" class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                {% block footer %}
+                    Wishlist voter - created by <a href="https://github.com/acidjunk">Rene Dohmen</a>
+                {% endblock %}
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-        {{ knp_menu_render('AppBundle:Builder:rightNavbarMenu', { 'style': 'navbar-right' }) }}
-    </div><!-- /.navbar-collapse -->
-</nav>
+        </div>
+    </footer>
 
-
-    {% block body %}{% endblock %}
     {% block javascripts %}{% endblock %}
     <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
     <script src="{{ asset('js/jquery.js') }}"></script>
