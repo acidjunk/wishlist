@@ -1,3 +1,10 @@
-feature_voter_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: FeatureVoterBundle:Default:index }
+FeatureVoterBundle_wishlist_index:
+    path:     /features
+    defaults: { _controller: FeatureVoterBundle:Wishlist:index }
+
+FeatureVoterBundle_wishlist_show:
+    path:  /feature/{id}
+    defaults: { _controller: FeatureVoterBundle:Wishlist:show }
+    requirements:
+        _method:  GET
+        id: \d+

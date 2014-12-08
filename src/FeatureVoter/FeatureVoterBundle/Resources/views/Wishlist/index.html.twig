@@ -1,0 +1,31 @@
+{% extends 'FeatureVoterBundle::layout.html.twig' %}
+
+{% block title %}Wishlist{% endblock %}
+
+{% block body %}
+    <div class="page-header">
+        <h1>Wishlist/Features</h1>
+    </div>
+    {% for wish in wishes %}
+        <h2><a href="{{ path('FeatureVoterBundle_wishlist_show', { 'id': wish.id }) }}">{{ wish.title }}</a></h2>
+        <div><b>Votes:</b> {{ wish.votes }}</div>
+        <div class="date"><time datetime="{{ wish.created|date('c') }}">{{ wish.created|date('l, F j, Y') }}</time></div>
+
+
+    {% else %}
+        <p>There are no wish entries yet.</p>
+    {% endfor %}
+
+{% endblock %}
+
+{% block sidebar %}
+    <div class="page-header">
+        <h1>Categories</h1>
+    </div>
+    <h3>Tags</h3>
+    <a href="#">Epic</a><br>
+    <a href="#">Story</a>
+    <h3>Labels</h3>
+    <a href="#">Nice to have</a><br>
+    <a href="#">Wishful thinking</a>
+{% endblock %}
