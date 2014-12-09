@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c960160de902796084811b48d8525743",
+    "hash": "7519c9e705dd8f71ee079007e7f090eb",
     "packages": [
         {
             "name": "braincrafted/bootstrap-bundle",
@@ -987,17 +987,6 @@
             "time": "2014-01-12 16:20:24"
         },
         {
-            "name": "jquery/jquery",
-            "version": "1.10.2",
-            "dist": {
-                "type": "file",
-                "url": "http://code.jquery.com/jquery-1.10.2.js",
-                "reference": null,
-                "shasum": null
-            },
-            "type": "library"
-        },
-        {
             "name": "knplabs/knp-menu",
             "version": "v2.0.1",
             "source": {
@@ -1045,7 +1034,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "KnpLabs",
+                    "name": "Knplabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -1260,65 +1249,6 @@
                 "psr-3"
             ],
             "time": "2014-09-30 13:30:58"
-        },
-        {
-            "name": "oyejorge/less.php",
-            "version": "v1.7.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/oyejorge/less.php.git",
-                "reference": "82372b389386ae1edab55495eae4b400cca3c86c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/oyejorge/less.php/zipball/82372b389386ae1edab55495eae4b400cca3c86c",
-                "reference": "82372b389386ae1edab55495eae4b400cca3c86c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2"
-            },
-            "bin": [
-                "bin/lessc"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Less": "lib/"
-                },
-                "classmap": [
-                    "lessc.inc.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Matt Agar",
-                    "homepage": "https://github.com/agar"
-                },
-                {
-                    "name": "Martin Jantošovič",
-                    "homepage": "https://github.com/Mordred"
-                },
-                {
-                    "name": "Josh Schmidt",
-                    "homepage": "https://github.com/oyejorge"
-                }
-            ],
-            "description": "PHP port of the Javascript version of LESS http://lesscss.org",
-            "homepage": "http://lessphp.gpeasy.com",
-            "keywords": [
-                "css",
-                "less",
-                "less.js",
-                "lesscss",
-                "php",
-                "stylesheet"
-            ],
-            "time": "2014-06-05 16:09:50"
         },
         {
             "name": "psr/log",
@@ -1900,6 +1830,59 @@
                 "css"
             ],
             "time": "2013-12-05 16:09:10"
+        },
+        {
+            "name": "twbs/bootstrap-sass",
+            "version": "v3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap-sass.git",
+                "reference": "a5f5954268779ce0faf7607b3c35191a8d0fdfe6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap-sass/zipball/a5f5954268779ce0faf7607b3c35191a8d0fdfe6",
+                "reference": "a5f5954268779ce0faf7607b3c35191a8d0fdfe6",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas McDonald"
+                },
+                {
+                    "name": "Tristan Harward"
+                },
+                {
+                    "name": "Peter Gumeson"
+                },
+                {
+                    "name": "Gleb Mazovetskiy"
+                },
+                {
+                    "name": "Mark Otto"
+                },
+                {
+                    "name": "Jacob Thornton"
+                }
+            ],
+            "description": "bootstrap-sass is a Sass-powered version of Bootstrap, ready to drop right into your Sass powered applications.",
+            "homepage": "http://github.com/twbs/bootstrap-sass",
+            "keywords": [
+                "bootstrap",
+                "css",
+                "sass"
+            ],
+            "time": "2014-06-26 16:54:15"
         },
         {
             "name": "twig/extensions",

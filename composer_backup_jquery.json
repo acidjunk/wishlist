@@ -21,6 +21,8 @@
         "braincrafted/bootstrap-bundle": "dev-master",
         "twbs/bootstrap": "3.0.*",
         "twbs/bootstrap-sass": "3.2.*",
+        "jquery/jquery":  "1.11.*",
+        "oyejorge/less.php": "~1.5",
         "knplabs/knp-menu-bundle": "~2.0",
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "doctrine/data-fixtures" : "dev-master"
