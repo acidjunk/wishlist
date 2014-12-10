@@ -9,28 +9,28 @@ with the ability to vote on features/wishes.
 You'll need composer and sass preinstalled. Copy the app/config/parameters.yml.dist to app/config/parameters.yml. 
 Tweak the setting in parameters.yml so it can reach at least a MySQL Database. Then install the deps:
 
-'''php composer.phar install'''
+`php composer.phar install`
 
 
 2) Generate DB and assets
 
 **Test the asset pipeline:**
-'''php app/console assetic:dump'''
+`php app/console assetic:dump`
 
 **Create DB:**
-'''mysqladmin -u MYSQLUSER -p create wishlist'''
+`mysqladmin -u MYSQLUSER -p create wishlist`
 OR use:
-'''php app/console doctrine:database:create'''
+`php app/console doctrine:database:create`
 
 **Init the DB:**
-'''php app/console doctrine:schema:create'''
+`php app/console doctrine:schema:create`
 
 **Generate some test data (optional)**
-'''php app/console doctrine:fixtures:load'''
+`php app/console doctrine:fixtures:load`
 
 3) Start the app in dev mode:
 
-'''php app/console server:run'''
+`php app/console server:run`
 
 Released under the MIT or BSD license.
 
