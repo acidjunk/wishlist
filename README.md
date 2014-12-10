@@ -6,11 +6,11 @@ the wishlist. It's based on Symfony2; it features a bootstrap3 layout a small bl
 with the ability to vote on features/wishes.
 
 1) Installation
-You'll need composer and sass preinstalled.
+You'll need composer and sass preinstalled. Copy the app/config/parameters.yml.dist to app/config/parameters.yml. 
+Tweak the setting in parameters.yml so it can reach at least a MySQL Database. Then install the deps:
 
 php composer.phar install
 
-Tweak the setting in parameters.yml so it can reach at least a MySQL Database.
 
 2) Generate DB and assets
 

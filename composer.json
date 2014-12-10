@@ -11,9 +11,9 @@
             "type": "package",
             "package": {
                 "name": "jquery/jquery",
-                "version": "1.10.2",
+                "version": "1.11.1",
                 "dist": {
-                    "url": "http://code.jquery.com/jquery-1.10.2.js",
+                    "url": "http://code.jquery.com/jquery-1.11.1.js",
                     "type": "file"
                 }
             }
