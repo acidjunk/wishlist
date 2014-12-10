@@ -15,17 +15,23 @@ Tweak the setting in parameters.yml so it can reach at least a MySQL Database. T
 2) Generate DB and assets
 
 **Test the asset pipeline:**
+
 `php app/console assetic:dump`
 
 **Create DB:**
+
 `mysqladmin -u MYSQLUSER -p create wishlist`
+
 OR use:
+
 `php app/console doctrine:database:create`
 
 **Init the DB:**
+
 `php app/console doctrine:schema:create`
 
 **Generate some test data (optional)**
+
 `php app/console doctrine:fixtures:load`
 
 3) Start the app in dev mode:
