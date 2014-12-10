@@ -1,14 +1,14 @@
 <?php
 
-namespace FeatureVoter\FeatureVoterBundle\Entity;
+namespace Blogger\BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="wishlist")
+ * @ORM\Table(name="blog")
  */
-class Wishlist
+class Blog
 {
     /**
      * @ORM\Id
@@ -18,14 +18,9 @@ class Wishlist
     protected $id;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string")
      */
     protected $title;
-
-    /**
-     * @ORM\Column(type="text")
-     */
-    protected $description;
 
     /**
      * @ORM\Column(type="string", length=100)
@@ -33,14 +28,21 @@ class Wishlist
     protected $author;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="text")
      */
-    protected $votes;
+    protected $blog;
+
+    /**
+     * @ORM\Column(type="string", length=20)
+     */
+    protected $image;
 
     /**
      * @ORM\Column(type="text")
      */
     protected $tags;
+
+    protected $comments;
 
     /**
      * @ORM\Column(type="datetime")
@@ -51,7 +53,6 @@ class Wishlist
      * @ORM\Column(type="datetime")
      */
     protected $updated;
-
 
     /**
      * Get id
@@ -67,7 +68,7 @@ class Wishlist
      * Set title
      *
      * @param string $title
-     * @return Wishlist
+     * @return Blog
      */
     public function setTitle($title)
     {
@@ -87,33 +88,10 @@ class Wishlist
     }
 
     /**
-     * Set description
-     *
-     * @param string $description
-     * @return Wishlist
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string 
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
      * Set author
      *
      * @param string $author
-     * @return Wishlist
+     * @return Blog
      */
     public function setAuthor($author)
     {
@@ -133,33 +111,56 @@ class Wishlist
     }
 
     /**
-     * Set votes
+     * Set blog
      *
-     * @param integer $votes
-     * @return Wishlist
+     * @param string $blog
+     * @return Blog
      */
-    public function setVotes($votes)
+    public function setBlog($blog)
     {
-        $this->votes = $votes;
+        $this->blog = $blog;
 
         return $this;
     }
 
     /**
-     * Get votes
+     * Get blog
      *
-     * @return integer 
+     * @return string 
      */
-    public function getVotes()
+    public function getBlog()
     {
-        return $this->votes;
+        return $this->blog;
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     * @return Blog
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string 
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 
     /**
      * Set tags
      *
      * @param string $tags
-     * @return Wishlist
+     * @return Blog
      */
     public function setTags($tags)
     {
@@ -182,7 +183,7 @@ class Wishlist
      * Set created
      *
      * @param \DateTime $created
-     * @return Wishlist
+     * @return Blog
      */
     public function setCreated($created)
     {
@@ -205,7 +206,7 @@ class Wishlist
      * Set updated
      *
      * @param \DateTime $updated
-     * @return Wishlist
+     * @return Blog
      */
     public function setUpdated($updated)
     {

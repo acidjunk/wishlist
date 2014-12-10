@@ -1,14 +1,15 @@
 BloggerBlogBundle_homepage:
     path:     /blog
-    defaults: { _controller: BloggerBlogBundle:Page:index }
+    defaults: { _controller: BloggerBlogBundle:Blog:index }
     requirements:
       _method: GET
 
-blogger_blog_homepage:
-    path:     /blog/{name}
-    defaults: { _controller: BloggerBlogBundle:Page:index }
+BloggerBlogBundle_blog_show:
+    path:  /blog/{id}
+    defaults: { _controller: BloggerBlogBundle:Blog:show }
     requirements:
-      _method: GET
+        _method:  GET
+        id: \d+
 
 BloggerBlogBundle_about:
     pattern:  /about

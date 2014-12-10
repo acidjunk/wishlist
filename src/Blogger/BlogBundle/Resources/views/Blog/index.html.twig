@@ -1,0 +1,29 @@
+{% extends 'BloggerBlogBundle::layout.html.twig' %}
+
+{% block title %}Blog index{% endblock %}
+
+{% block body %}
+    <div class="page-header">
+        <h1>Blog home</h1>
+    </div>
+    {% for blog in blogs %}
+        <p>{{ blog.created|date('l, F j, Y') }}</p>
+        <h2><a href="{{ path('BloggerBlogBundle_blog_show', { 'id': blog.id }) }}">{{ blog.title }}</a></h2>
+        <p>{{ blog.blog }}</p>
+        <p>Comments: -</p>
+        <p>Posted by <span class="highlight">{{blog.author}}</span> at {{ blog.created|date('h:iA') }}</p>
+        <p>Tags: <span class="highlight">{{ blog.tags }}</span></p>
+        <div class="date"><time datetime="{{ blog.created|date('c') }}">{{ blog.created|date('l, F j, Y') }}</time></div>
+    {% else %}
+        <p>There are no blog entries yet.</p>
+    {% endfor %}
+{% endblock %}
+
+{% block sidebar %}
+    <div class="page-header">
+        <h1>Archive</h1>
+    </div>
+    <h3>December</h3>
+    <a href="#">Blog 1</a><br>
+    <a href="#">Blog 2</a>
+{% endblock %}
